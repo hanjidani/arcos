@@ -52,7 +52,6 @@ def get_features(model, dataloader):
         for inputs, _ in dataloader:
             inputs = inputs.to(device)
             features = feature_extractor(inputs)
-            features = features.view(features.size(0), -1) # Flatten
             features_list.append(features.cpu().numpy())
             
     return np.concatenate(features_list)
