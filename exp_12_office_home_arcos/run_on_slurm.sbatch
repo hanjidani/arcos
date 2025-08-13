@@ -9,9 +9,12 @@
 #SBATCH --time=2:00:00
 #SBATCH --gres=gpu:1
 
+# Add project root to python path
+export PYTHONPATH=$PYTHONPATH:$(dirname $PWD)
+
 # Activate conda environment
 source /home/ali.rasekh/miniconda3/etc/profile.d/conda.sh
-conda activate arcos
+conda activate newenv
 
 # Create slurm_logs directory if it doesn't exist
 mkdir -p slurm_logs
