@@ -1,0 +1,2 @@
+num_layers,shift_severity,shift_type,delta_r,g_q,g_q_tilde,d_q_q_tilde,mmd_dist,bound,tightness_ratio
+2,6.0,translation,0.9621,0.0049000000000000155,0.005299999999999971,0.9572666666666666,0.4769664406776428,1.4444331073443095,1.5013336527848555

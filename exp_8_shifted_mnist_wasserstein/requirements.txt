@@ -1,0 +1,9 @@
+torch
+torchvision
+numpy
+pandas
+scipy
+tqdm
+scikit-learn
+typing-extensions
+POT

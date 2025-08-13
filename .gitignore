@@ -1,0 +1,23 @@
+# Data files
+/data/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Slurm output files
+slurm-*.out
+
+# W&B logs
+wandb/
+
+# Checkpoints and outputs
+*.pth
+*.pt
+cached_fusion/
+checkpoints_iid/
+checkpoints_noniid/
+outputs_iid/
+outputs_noniid/
+log/
+logs/
