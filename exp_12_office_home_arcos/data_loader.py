@@ -40,6 +40,10 @@ def download_and_extract_data():
     subprocess.run(['kaggle', 'datasets', 'download', '-d', 'karntiwari/home-office-dataset', '-p', './data', '--unzip'], check=True)
     print("Dataset downloaded and extracted successfully.")
 
+    # --- Debugging Step ---
+    print("Listing contents of the data directory for debugging:")
+    subprocess.run(['ls', '-R', './data'])
+
 
 class OfficeHomeDataset(Dataset):
     """Custom Dataset for Office-Home."""
