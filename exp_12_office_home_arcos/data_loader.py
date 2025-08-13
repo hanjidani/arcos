@@ -40,10 +40,6 @@ def download_and_extract_data():
     subprocess.run(['kaggle', 'datasets', 'download', '-d', 'karntiwari/home-office-dataset', '-p', './data', '--unzip'], check=True)
     print("Dataset downloaded and extracted successfully.")
 
-    # --- Debugging Step ---
-    print("Listing contents of the data directory for debugging:")
-    subprocess.run(['ls', '-R', './data'])
-
 
 class OfficeHomeDataset(Dataset):
     """Custom Dataset for Office-Home."""
@@ -89,7 +85,7 @@ def get_office_home_dataloaders(batch_size=32):
     Downloads the Office-Home dataset and returns dataloaders for the 'Art' and 'Real World' domains.
     """
     download_and_extract_data()
-    base_path = './data/home-office-dataset'
+    base_path = './data/OfficeHomeDataset_10072016'
     
     art_dataset = OfficeHomeDataset(base_path=base_path, domain='Art', transform=data_transforms['train'])
     real_world_dataset = OfficeHomeDataset(base_path=base_path, domain='Real World', transform=data_transforms['train'])
