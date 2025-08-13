@@ -19,5 +19,8 @@ conda activate newenv
 # Create slurm_logs directory if it doesn't exist
 mkdir -p slurm_logs
 
+# Install requirements
+pip install -r requirements.txt
+
 # Run the experiment
 python run_experiment.py --batch_size 64 --num_epochs 15 --lr 0.001 --bad_lr 0.1 --weight_decay 1e-4
